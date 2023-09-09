@@ -14,7 +14,7 @@ $('#bootstrapForm').submit(function (event) {
             // does not support it, so this is handled as a failure.
             alert('Form Submitted. Thanks.')
             // You can also redirect the user to a custom thank-you page:
-            window.location = 'thankyoupage.html'
+            window.location = 'thankyoupage.html';
         }
     })
 })
