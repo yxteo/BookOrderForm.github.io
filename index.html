@@ -5,447 +5,568 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>沙巴崇正中学 2024 年度书单</title>
+    <title>沙巴崇正中学 2024年度 初一书单</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <style>
+        #bootstrapForm {
+            width: 60%;
+            min-width: 28em;
+            margin: auto;
+            margin-bottom: 0px;
+            padding: 10px;
+            padding-bottom: 0px;
+        }
+
+        #fileUpload {
+            width: 60%;
+            min-width: 28em;
+            margin: auto;
+            margin-top: 0px;
+            margin-bottom: 60px;
+            padding: 10px;
+            padding-top: 0px;
+        }
+
+        #footer-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 60%;
+            min-width: 28em;
+            background-color: #f5f5f5;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 2px 2px 8px 5px rgba(0, 0, 0, .4);
+        }
+
+        #totalValue {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #logo {
+            max-width: 50px;
+            max-height: 50px;
+            float: left;
+            margin-right: 10px;
+            margin-top: 3%;
+        }
+
+        .price {
+            text-align: right;
+            padding-right: 50px;
+        }
+
+        .title {
+            margin-top: 3%;
+            font-weight: bold;
+            margin-bottom: 3%;
+        }
+
+        .inline {
+            display: inline-block;
+        }
+
+        td input [type=checkbox] {
+            text-align: right;
+            padding-right: 33px;
+        }
+
+        table td {
+            padding: 0px;
+        }
+    </style>
 </head>
 
 <body>
-  
+    <script type="text/javascript">var submitted = false</script>
 
-    <body style="width:60%;margin:auto;margin-bottom:60px;">
-        <script type="text/javascript">var submitted = false</script>
+    <iframe name="hiddenConfirm" id="hiddenConfirm" style="display:none;"
+        onload="if(submitted){window.location='thankyoupage.html'}"></iframe>
+    <form
+        action="https://script.google.com/macros/s/AKfycbwwkGyAsUHDgrCXZvD3zwJrl_E45T36Gn_R_C9yPh_wTqSOefdQ56uOmucO4-859y8d/exec"
+        target="hiddenConfirm" onsubmit="submitted=true" id="bootstrapForm" method="POST" enctype="multipart/form-data">
 
-        <iframe name="hiddenConfirm" id="hiddenConfirm" style="display:none;"
-            onload="if(submitted){window.location='thankyoupage.html'}"></iframe>
-        <form
-            action="https://script.google.com/macros/s/AKfycbxGdImIfx4NzGsv7NvsDRDfvmcIgGJQD3mFr-nTBPz8ui6H96zpTEBnp6UaD8b_ibdO/exec"
-            target="hiddenConfirm" onsubmit="submitted=true" id="bootstrapForm" method="POST">
-
-            <fieldset>
-                <div>沙巴崇正中学 2024 年度书单</div>
-                <div>SABAH TSHUNG TSIN SECONDARY SCHOOL BOOK LIST 2024</div>
-            </fieldset>
-
-            <!-- Field type: "short" id: "19113553" -->
-            <fieldset>
-                <legend for="19113553">Email</legend>
-                <div class="form-group">
-                    <input id="1113452996" type="email" name="E-Mail" class="form-control" required>
-                </div>
-            </fieldset>
-
-            <!-- Field type: "checkboxes" id: "589352420" -->
-            <fieldset>
-                <legend for="589352420">Book</legend>
-                <div class="form-group">
-                    <table class="table table-sm">
-                        <thead>
-                            <tr>
-                                <th scope="col">Subject</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Publisher</th>
-                                <th scope="col">Price (RM)</th>
-                                <th scope="col">Select
-                                    <input type="checkbox" id="selectAll" onclick="selectAllBooks(this)">
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td rowspan="6">Chinese</td>
-                                <td>01. 华文初一上册 [2020 版本]</td>
-                                <td>董总</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>25.30</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="1" id="bl" value='25.30'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>02. 华文初一下册 [2020 版本]</td>
-                                <td>董总</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>25.30</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="2" id="bl" value='25.30'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>03. 独中华文练习（初一）S2281</td>
-                                <td>艺青</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>13.50</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="3" id="bl" value='13.50'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>04. 中学应用文 (2023)</td>
-                                <td>董总</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>16.50</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="4" id="bl" value='16.50'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>05. 初中汉语知识精选 </td>
-                                <td>彩虹</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>13.90</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="5" id="bl" value='13.90'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>06. 喜“悦”人生阅读报告手册 (3 本) </td>
-                                <td>崇正图书馆</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>7.50</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="6" id="bl" value='7.50' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td rowspan="5">Elementary Chinese</td>
-                                <td>07. 华文课本 （四） KSSR [2020 版本]</td>
-                                <td>马文化</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>10.90</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="7" id="bl" value='10.90'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>08. 笔顺练习 （1A） </td>
-                                <td>马文化</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>4.50</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="8" id="bl" value='4.50' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>09. 笔顺练习 （1B） </td>
-                                <td>马文化</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>4.50</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="9" id="bl" value='4.50' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>10. 笔顺练习 （2A） </td>
-                                <td>马文化</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>5.40</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="10" id="bl" value='5.40' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>11. 笔顺练习 （2B） </td>
-                                <td>马文化</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch"><label>5.40</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="11" id="bl" value='5.40' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td rowspan="4">Bahasa Melayu</td>
-                                <td>12. KSSM Bahasa Melayu Tingkatan 1</td>
-                                <td>DBP</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="bm"><label>13.20</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="12" id="bl" value='13.20'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>13. Sejambak Bakti</td>
-                                <td>DBP</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="bm"><label>9.30</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="13" id="bl" value='9.30' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>14. Kuingin Berterima Kasih</td>
-                                <td>DBP</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="bm"><label>4.20</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="14" id="bl" value='4.20' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>15. Modul Aktiviti Interaktif PBD UASA B. M Ting.1</td>
-                                <td>Sasbadi</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="bm"><label>12.90</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="15" id="bl" value='12.90'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">English</td>
-                                <td>16. Think Student’s Book 2- Level B1 (2nd Edition)</td>
-                                <td>Cambridge</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="eng"><label>62.00</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="16" id="bl" value='62.00'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>17. English Workbook Junior Middle 1</td>
-                                <td>UCSAM</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="eng"><label>11.00</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="17" id="bl" value='11.00'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">Mathematics</td>
-                                <td>18. Junior 1 Mathematics Book 1 (Second Edition 2021)</td>
-                                <td>STTSS</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="math"><label>23.00</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="18" id="bl" value='23.00'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>19. Junior 1 Mathematics Book 2 (Second Edition 2021)</td>
-                                <td>STTSS</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="math"><label>23.00</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="19" id="bl" value='23.00'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="3">Science</td>
-                                <td>20. Junior One Science Book (1) (Third Edition 2021)</td>
-                                <td>STTSS</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="science"><label>35.00</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="20" id="bl" value='35.00'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>21. Junior One Science Book (2) (Third Edition 2021)</td>
-                                <td>STTSS</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="science"><label>35.00</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="21" id="bl" value='35.00'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>22. Junior One Science Workbook (2024)</td>
-                                <td>STTSS</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="science"><label></label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="22" id="bl" value='0' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">History</td>
-                                <td>23. KSSM Sejarah Tingkatan 1</td>
-                                <td>DBP</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="history"><label>11.50</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="23" id="bl" value='11.50'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>24. Modul Aktiviti Interaktif PBD UASA Sejarah Ting. 1</td>
-                                <td>Sasbadi</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="history"><label>12.90</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="24" id="bl" value='12.90'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="3">Chinese History</td>
-                                <td>25. 初中历史第一册 (2023)</td>
-                                <td>董总</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch-history"><label>25.30</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="25" id="bl" value='25.30'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>26. 初中历史作业第一册 (2023)</td>
-                                <td>董总</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch-history"><label>11.00</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="26" id="bl" value='11.00'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>27. 初中历史问答题 (2024)</td>
-                                <td>崇正</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="ch-history"><label></label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="27" id="bl" value='0' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">Pendidikan Moral</td>
-                                <td>28. KSSM Pendidikan Moral Tingkatan 1</td>
-                                <td>DBP</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="moral"><label>13.50</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="28" id="bl" value='13.50'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>29. Modul Aktiviti Interaktif PBD UASA Pendidikan Moral</td>
-                                <td>Sasbadi</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="moral"><label>10.90</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="29" id="bl" value='10.90'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>STEAM</td>
-                                <td>30. SB STEAM</td>
-                                <td>STTSS</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="steam"><label></label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="30" id="bl" value='0' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Geografi</td>
-                                <td>31. KSSM Geografi Tingkatan 1</td>
-                                <td>Era Visi</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="geografi"><label>9.30</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="31" id="bl" value='9.30' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Counselling</td>
-                                <td>32. SB Humanities & Guidance</td>
-                                <td>STTSS</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="counsel"><label></label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="32" id="bl" value='0' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">Art</td>
-                                <td>33. 初中美术 （第一册） (2020 版本)</td>
-                                <td>董总</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="art"><label>23.10</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="33" id="bl" value='23.10'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>34. 华文书法米字格练习簿</td>
-                                <td>董总</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="art"><label>11.00</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="34" id="bl" value='11.00'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>Music</td>
-                                <td>35. 初中《音乐》全一册</td>
-                                <td>董总</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="music"><label>35.20</label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="35" id="bl" value='35.20'
-                                        onclick="updateTotal()"></td>
-                            </tr>
-                            <tr>
-                                <td>Information Technology</td>
-                                <td>36. Google Classroom Softcopy</td>
-                                <td>-</td>
-                                <td style="text-align:right;padding-right:50px;">
-                                    <div class="checkbox" id="it"><label></label></div>
-                                </td>
-                                <td style="text-align:right;padding-right:33px;"><input type="checkbox" name="36" id="bl" value='0' onclick="updateTotal()">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </fieldset>
-            <input type="hidden" name="fvv" value="1">
-            <input type="hidden" name="fbzx" value="-2739287917357523008">
-
-
-            <!-- Field type: "short" id: "555055487" -->
-            <fieldset>
-                <legend for="555055487"></legend>
-                <div class="form-group">
-                    <input id="1287973882" type="hidden" name="TotalPrice" class="form-control">
-                </div>
-            </fieldset>
-
-            <input type="hidden" name="pageHistory" value="0">
-            <div id="footer-container"
-                style="position: fixed; bottom: 0;right:auto; left: auto; width: 60%; background-color: #f5f5f5; padding: 5px; display: flex; justify-content: space-between;">
-                <!-- Submit button on the left -->
-
-                <div style="font-size:25px;font-weight:bold;"id="totalValue">Total Price: 0.00</div>
-                <div><input class="btn btn-primary" type="submit" value="Submit"></div>
-
-
+        <fieldset>
+            <img src="https://www2.sttss.edu.my/wp-content/uploads/2021/10/STTSS-School-Logo-2161x2114-1.jpg" alt="logo.jpg"
+                id="logo">
+            <div class="title">
+                <div>沙巴崇正中学 2024年度 初一书单</div>
+                <div>SABAH TSHUNG TSIN SECONDARY SCHOOL JUNIOR 1 BOOK LIST 2024</div>
             </div>
+        </fieldset>
 
-        </form>
-        <script>
-            function updateTotal() {
-                var checkboxes = document.querySelectorAll('input[type="checkbox"][id="bl"]');
-                var total = 0.00;
+        <fieldset>
+            <legend>Student Name 姓名</legend>
+            <div class="form-group">
+                <input type="text" name="Name" class="form-control" placeholder="Full Name" required>
+            </div>
+        </fieldset>
 
-                checkboxes.forEach(function (checkbox) {
-                    if (checkbox.checked) {
-                        total += parseFloat(checkbox.value);
+        <fieldset>
+            <legend>Email 电邮</legend>
+            <div class="form-group">
+                <input type="email" name="E-Mail" class="form-control" placeholder="E-Mail Address" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Class 班级</legend>
+            <div class="form-group">
+                <select name="Class" class="form-control" required>
+                    <option value="" disabled selected>Select Class</option>
+                    <option value="J1A">J1A 初一忠</option>
+                    <option value="J1B">J1B 初一孝</option>
+                    <option value="J1C">J1C 初一仁</option>
+                    <option value="J1D">J1D 初一爱</option>
+                    <option value="J1E">J1E 初一信</option>
+                    <option value="J1F">J1F 初一义</option>
+                    <option value="J1G">J1G 初一和</option>
+                    <option value="J1H">J1H 初一平</option>
+                    <option value="J1I">J1I 初一礼</option>
+                    <option value="J1J">J1J 初一勤</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Book List 书单</legend>
+            <div class="form-group">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Publisher</th>
+                            <th scope="col">Price (RM)</th>
+                            <th scope="col">
+                                <input type="checkbox" id="selectAll" onclick="selectAllBooks(this)">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="6">Chinese</td>
+                            <td>01. 华文初一上册 [2020 版本]</td>
+                            <td>董总</td>
+                            <td>
+                                <div class="price" id="ch"><label>25.30</label></div>
+                            </td>
+                            <td><input type="checkbox" name="1" id="bl" value='25.30' onclick="updateTotal()"></td>
+                        </tr>
+                        <tr>
+                            <td>02. 华文初一下册 [2020 版本]</td>
+                            <td>董总</td>
+                            <td>
+                                <div class="price" id="ch"><label>25.30</label></div>
+                            </td>
+                            <td><input type="checkbox" name="2" id="bl" value='25.30' onclick="updateTotal()">
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>03. 独中华文练习（初一）S2281</td>
+                <td>艺青</td>
+                <td class="price">
+                    <div class="price" id="ch"><label>13.50</label></div>
+                </td>
+                <td><input type="checkbox" name="3" id="bl" value='13.50' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>04. 中学应用文 (2023)</td>
+                <td>董总</td>
+                <td class="price">
+                    <div class="price" id="ch"><label>16.50</label></div>
+                </td>
+                <td><input type="checkbox" name="4" id="bl" value='16.50' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>05. 初中汉语知识精选 </td>
+                <td>彩虹</td>
+                <td class="price">
+                    <div class="price" id="ch"><label>13.90</label></div>
+                </td>
+                <td><input type="checkbox" name="5" id="bl" value='13.90' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>06. 喜“悦”人生阅读报告手册 (3 本) </td>
+                <td>崇正图书馆</td>
+                <td class="price">
+                    <div class="price" id="ch"><label>7.50</label></div>
+                </td>
+                <td><input type="checkbox" name="6" id="bl" value='7.50' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="5">Elementary Chinese</td>
+                <td>07. 华文课本 （四） KSSR [2020 版本]</td>
+                <td>马文化</td>
+                <td class="price">
+                    <div class="price" id="ch"><label>10.90</label></div>
+                </td>
+                <td><input type="checkbox" name="7" id="bl" value='10.90' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>08. 笔顺练习 （1A） </td>
+                <td>马文化</td>
+                <td class="price">
+                    <div class="price" id="ch"><label>4.50</label></div>
+                </td>
+                <td><input type="checkbox" name="8" id="bl" value='4.50' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td>09. 笔顺练习 （1B） </td>
+                <td>马文化</td>
+                <td class="price">
+                    <div class="price" id="ch"><label>4.50</label></div>
+                </td>
+                <td><input type="checkbox" name="9" id="bl" value='4.50' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td>10. 笔顺练习 （2A） </td>
+                <td>马文化</td>
+                <td class="price">
+                    <div class="price" id="ch"><label>5.40</label></div>
+                </td>
+                <td><input type="checkbox" name="10" id="bl" value='5.40' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td>11. 笔顺练习 （2B） </td>
+                <td>马文化</td>
+                <td class="price">
+                    <div class="price" id="ch"><label>5.40</label></div>
+                </td>
+                <td><input type="checkbox" name="11" id="bl" value='5.40' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4">Bahasa Melayu</td>
+                <td>12. KSSM Bahasa Melayu Tingkatan 1</td>
+                <td>DBP</td>
+                <td class="price">
+                    <div class="price" id="bm"><label>13.20</label></div>
+                </td>
+                <td><input type="checkbox" name="12" id="bl" value='13.20' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>13. Sejambak Bakti</td>
+                <td>DBP</td>
+                <td class="price">
+                    <div class="price" id="bm"><label>9.30</label></div>
+                </td>
+                <td><input type="checkbox" name="13" id="bl" value='9.30' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td>14. Kuingin Berterima Kasih</td>
+                <td>DBP</td>
+                <td class="price">
+                    <div class="price" id="bm"><label>4.20</label></div>
+                </td>
+                <td><input type="checkbox" name="14" id="bl" value='4.20' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td>15. Modul Aktiviti Interaktif PBD UASA B. M Ting.1</td>
+                <td>Sasbadi</td>
+                <td class="price">
+                    <div class="price" id="bm"><label>12.90</label></div>
+                </td>
+                <td><input type="checkbox" name="15" id="bl" value='12.90' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">English</td>
+                <td>16. Think Student’s Book 2- Level B1 (2nd Edition)</td>
+                <td>Cambridge</td>
+                <td class="price">
+                    <div class="price" id="eng"><label>62.00</label></div>
+                </td>
+                <td><input type="checkbox" name="16" id="bl" value='62.00' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>17. English Workbook Junior Middle 1</td>
+                <td>UCSAM</td>
+                <td class="price">
+                    <div class="price" id="eng"><label>11.00</label></div>
+                </td>
+                <td><input type="checkbox" name="17" id="bl" value='11.00' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">Mathematics</td>
+                <td>18. Junior 1 Mathematics Book 1 (Second Edition 2021)</td>
+                <td>STTSS</td>
+                <td class="price">
+                    <div class="price" id="math"><label>23.00</label></div>
+                </td>
+                <td><input type="checkbox" name="18" id="bl" value='23.00' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>19. Junior 1 Mathematics Book 2 (Second Edition 2021)</td>
+                <td>STTSS</td>
+                <td class="price">
+                    <div class="price" id="math"><label>23.00</label></div>
+                </td>
+                <td><input type="checkbox" name="19" id="bl" value='23.00' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td rowspan="3">Science</td>
+                <td>20. Junior One Science Book (1) (Third Edition 2021)</td>
+                <td>STTSS</td>
+                <td class="price">
+                    <div class="price" id="science"><label>35.00</label></div>
+                </td>
+                <td><input type="checkbox" name="20" id="bl" value='35.00' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>21. Junior One Science Book (2) (Third Edition 2021)</td>
+                <td>STTSS</td>
+                <td class="price">
+                    <div class="price" id="science"><label>35.00</label></div>
+                </td>
+                <td><input type="checkbox" name="21" id="bl" value='35.00' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>22. Junior One Science Workbook (2024)</td>
+                <td>STTSS</td>
+                <td class="price">
+                    <div class="price" id="science"><label></label></div>
+                </td>
+                <td><input type="checkbox" name="22" id="bl" value='0' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">History</td>
+                <td>23. KSSM Sejarah Tingkatan 1</td>
+                <td>DBP</td>
+                <td class="price">
+                    <div class="price" id="history"><label>11.50</label></div>
+                </td>
+                <td><input type="checkbox" name="23" id="bl" value='11.50' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>24. Modul Aktiviti Interaktif PBD UASA Sejarah Ting. 1</td>
+                <td>Sasbadi</td>
+                <td class="price">
+                    <div class="price" id="history"><label>12.90</label></div>
+                </td>
+                <td><input type="checkbox" name="24" id="bl" value='12.90' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td rowspan="3">Chinese History</td>
+                <td>25. 初中历史第一册 (2023)</td>
+                <td>董总</td>
+                <td class="price">
+                    <div class="price" id="ch-history"><label>25.30</label></div>
+                </td>
+                <td><input type="checkbox" name="25" id="bl" value='25.30' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>26. 初中历史作业第一册 (2023)</td>
+                <td>董总</td>
+                <td class="price">
+                    <div class="price" id="ch-history"><label>11.00</label></div>
+                </td>
+                <td><input type="checkbox" name="26" id="bl" value='11.00' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>27. 初中历史问答题 (2024)</td>
+                <td>崇正</td>
+                <td class="price">
+                    <div class="price" id="ch-history"><label></label></div>
+                </td>
+                <td><input type="checkbox" name="27" id="bl" value='0' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Pendidikan Moral</td>
+                <td>28. KSSM Pendidikan Moral Tingkatan 1</td>
+                <td>DBP</td>
+                <td class="price">
+                    <div class="price" id="moral"><label>13.50</label></div>
+                </td>
+                <td><input type="checkbox" name="28" id="bl" value='13.50' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>29. Modul Aktiviti Interaktif PBD UASA Pendidikan Moral</td>
+                <td>Sasbadi</td>
+                <td class="price">
+                    <div class="price" id="moral"><label>10.90</label></div>
+                </td>
+                <td><input type="checkbox" name="29" id="bl" value='10.90' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>STEAM</td>
+                <td>30. SB STEAM</td>
+                <td>STTSS</td>
+                <td class="price">
+                    <div class="price" id="steam"><label></label></div>
+                </td>
+                <td><input type="checkbox" name="30" id="bl" value='0' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td>Geografi</td>
+                <td>31. KSSM Geografi Tingkatan 1</td>
+                <td>Era Visi</td>
+                <td class="price">
+                    <div class="price" id="geografi"><label>9.30</label></div>
+                </td>
+                <td><input type="checkbox" name="31" id="bl" value='9.30' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td>Counselling</td>
+                <td>32. SB Humanities & Guidance</td>
+                <td>STTSS</td>
+                <td class="price">
+                    <div class="price" id="counsel"><label></label></div>
+                </td>
+                <td><input type="checkbox" name="32" id="bl" value='0' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Art</td>
+                <td>33. 初中美术 （第一册） (2020 版本)</td>
+                <td>董总</td>
+                <td class="price">
+                    <div class="price" id="art"><label>23.10</label></div>
+                </td>
+                <td><input type="checkbox" name="33" id="bl" value='23.10' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>34. 华文书法米字格练习簿</td>
+                <td>董总</td>
+                <td class="price">
+                    <div class="price" id="art"><label>11.00</label></div>
+                </td>
+                <td><input type="checkbox" name="34" id="bl" value='11.00' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>Music</td>
+                <td>35. 初中《音乐》全一册</td>
+                <td>董总</td>
+                <td class="price">
+                    <div class="price" id="music"><label>35.20</label></div>
+                </td>
+                <td><input type="checkbox" name="35" id="bl" value='35.20' onclick="updateTotal()"></td>
+            </tr>
+            <tr>
+                <td>Information Technology</td>
+                <td>36. Google Classroom Softcopy</td>
+                <td>-</td>
+                <td class="price">
+                    <div class="price" id="it"><label></label></div>
+                </td>
+                <td><input type="checkbox" name="36" id="bl" value='0' onclick="updateTotal()">
+                </td>
+            </tr>
+            </tbody>
+            </table>
+        </fieldset>
+
+        <div class="form-group">
+            <input id="1287973882" type="hidden" name="TotalPrice" class="form-control">
+        </div>
+
+    </form>
+
+    <form
+        action="https://script.google.com/macros/s/AKfycbzeZ7KWVddf5108lUnvaboHspdpZOQdje2Qz8KeiizE--1oxyOovq8aQdyFj5v5eKsq/exec"
+        id="fileUpload" method="post">
+        <legend>Payment Receipt</legend>
+        <div id="data"></div>
+        <input name="file" id="uploadfile" type="file">
+    </form>
+    <label id="Message"></label>
+
+    <div id="footer-container">
+        <div id="totalValue">Total Price: 0.00</div>
+        <input type="button" class="btn btn-primary" value="Submit" onclick="submitBothForms()" />
+    </div>
+
+    <script>
+        function updateTotal() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"][id="bl"]');
+            var total = 0.00;
+
+            checkboxes.forEach(function (checkbox) {
+                if (checkbox.checked) {
+                    total += parseFloat(checkbox.value);
+                }
+            });
+
+            total = total.toFixed(2);
+            document.getElementById('totalValue').textContent = 'Total Price: ' + total;
+            document.getElementById('1287973882').value = total;
+        }
+
+        function selectAllBooks(checkbox) {
+            var bookCheckboxes = document.querySelectorAll('input[type="checkbox"][id="bl"]');
+
+            bookCheckboxes.forEach(function (bookCheckbox) {
+                bookCheckbox.checked = checkbox.checked;
+            });
+
+            updateTotal();
+        }
+
+
+
+        function submitBothForms() {
+            // Submit the first form to the first Google Apps Script endpoint
+            submitForm("bootstrapForm", "https://script.google.com/macros/s/AKfycbwwkGyAsUHDgrCXZvD3zwJrl_E45T36Gn_R_C9yPh_wTqSOefdQ56uOmucO4-859y8d/exec");
+
+            // Submit the second form to the second Google Apps Script endpoint
+            submitForm("fileUpload", "https://script.google.com/macros/s/AKfycbzeZ7KWVddf5108lUnvaboHspdpZOQdje2Qz8KeiizE--1oxyOovq8aQdyFj5v5eKsq/exec");
+        }
+
+        function submitForm(formId, endpoint) {
+            var form = document.getElementById(formId);
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", endpoint, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        console.log(formId + " submitted successfully.");
+                        var successMessage = document.getElementById("Message");
+                        successMessage.innerHTML = "Your Order is submitted.";
+                        window.location.href = "thankyoupage.html";
+                    } else {
+                        console.error("Error submitting " + formId + ": " + xhr.status);
+                        var errorMessage = document.getElementById("Message");
+                        errorMessage.innerHTML = "Error submitting " + formId + ": " + xhr.status;
                     }
-                });
+                }
+            };
+            xhr.send(formData);
+        }
 
-                total = total.toFixed(2);
-                document.getElementById('totalValue').textContent = 'Total Price: ' + total;
-                document.getElementById('1287973882').value = total;
+        $('#uploadfile').on("change", function () {
+            var file = this.files[0];
+            var fr = new FileReader();
+            fr.fileName = file.name;
+            fr.onload = function (e) {
+                e.target.result
+                html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+                html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+                html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+                $("#data").empty().append(html);
             }
+            fr.readAsDataURL(file);
+        });
 
-            function selectAllBooks(checkbox) {
-                var bookCheckboxes = document.querySelectorAll('input[type="checkbox"][id="bl"]');
 
-                bookCheckboxes.forEach(function (bookCheckbox) {
-                    bookCheckbox.checked = checkbox.checked;
-                });
 
-                updateTotal(); 
-            }
-        </script>
-    </body>
+    </script>
+</body>
 
 </html>
