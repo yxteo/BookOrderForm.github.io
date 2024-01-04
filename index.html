@@ -557,17 +557,42 @@
         }
 
     
+        function validateForm() {
+    // Check required fields
+    var name = document.forms["bootstrapForm"]["Name"].value;
+    var stuNo = document.forms["bootstrapForm"]["stu_no"].value;
+    var email = document.forms["bootstrapForm"]["E-Mail"].value;
+    var selectedClass = document.forms["bootstrapForm"]["Class"].value;
 
+    // Validate file upload
+    var fileInput = document.getElementById("uploadfile");
+    if (!fileInput || !fileInput.files || fileInput.files.length === 0) {
+        alert("Please select a file.");
+        return false;
+    }
 
+    if (name === "" || stuNo === "" || email === "" || selectedClass === "") {
+        alert("Please fill in all required fields.");
+        return false;
+    }
 
+    // Add more specific validations if needed
 
-        function submitBothForms() {
-            // Submit the first form to the first Google Apps Script endpoint
-            submitForm("bootstrapForm", "https://script.google.com/macros/s/AKfycbwwkGyAsUHDgrCXZvD3zwJrl_E45T36Gn_R_C9yPh_wTqSOefdQ56uOmucO4-859y8d/exec");
+    return true;
+}
 
-            // Submit the second form to the second Google Apps Script endpoint
-            submitForm("fileUpload", "https://script.google.com/macros/s/AKfycbyp7lgJ1AJj8N_h5BmknDSDeGAVUzDOTXuFNVXX6WULuNCgJ33o7uV-UENpQvZoY_TM/exec");
-        }
+function submitBothForms() {
+    // Validate the form before submission
+    if (validateForm()) {
+        // Submit the first form to the first Google Apps Script endpoint
+        submitForm("bootstrapForm", "https://script.google.com/macros/s/AKfycbwwkGyAsUHDgrCXZvD3zwJrl_E45T36Gn_R_C9yPh_wTqSOefdQ56uOmucO4-859y8d/exec");
+
+        // Submit the second form to the second Google Apps Script endpoint
+        submitForm("fileUpload", "https://script.google.com/macros/s/AKfycbyp7lgJ1AJj8N_h5BmknDSDeGAVUzDOTXuFNVXX6WULuNCgJ33o7uV-UENpQvZoY_TM/exec");
+    }
+}
+
+     
 
         function submitForm(formId, endpoint) {
             var form = document.getElementById(formId);
