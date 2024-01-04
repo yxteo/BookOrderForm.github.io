@@ -93,8 +93,8 @@
         target="hiddenConfirm" onsubmit="submitted=true" id="bootstrapForm" method="POST" enctype="multipart/form-data">
 
         <fieldset>
-            <img src="https://www2.sttss.edu.my/wp-content/uploads/2021/10/STTSS-School-Logo-2161x2114-1.jpg" alt="logo.jpg"
-                id="logo">
+            <img src="https://www2.sttss.edu.my/wp-content/uploads/2021/10/STTSS-School-Logo-2161x2114-1.jpg"
+                alt="logo.jpg" id="logo">
             <div class="title">
                 <div>沙巴崇正中学 2024年度 初一书单</div>
                 <div>SABAH TSHUNG TSIN SECONDARY SCHOOL JUNIOR 1 BOOK LIST 2024</div>
@@ -105,6 +105,13 @@
             <legend>Student Name 姓名</legend>
             <div class="form-group">
                 <input type="text" name="Name" class="form-control" placeholder="Full Name" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Student Number 学号</legend>
+            <div class="form-group">
+                <input type="text" name="stu_no" class="form-control" placeholder="Student Number" required>
             </div>
         </fieldset>
 
@@ -334,13 +341,12 @@
                 <td><input type="checkbox" name="21" id="bl" value='35.00' onclick="updateTotal()"></td>
             </tr>
             <tr>
-                <td>22. Junior One Science Workbook (2024)</td>
+                <td>22. Junior One Science Workbook (2024) *To Buy Later*</td>
                 <td>STTSS</td>
                 <td class="price">
-                    <div class="price" id="science"><label></label></div>
+                    <div class="price" id="science"><label>TBA</label></div>
                 </td>
-                <td><input type="checkbox" name="22" id="bl" value='0' onclick="updateTotal()">
-                </td>
+
             </tr>
             <tr>
                 <td rowspan="2">History</td>
@@ -380,9 +386,9 @@
                 <td>27. 初中历史问答题 (2024)</td>
                 <td>崇正</td>
                 <td class="price">
-                    <div class="price" id="ch-history"><label></label></div>
+                    <div class="price" id="ch-history"><label>6.30</label></div>
                 </td>
-                <td><input type="checkbox" name="27" id="bl" value='0' onclick="updateTotal()">
+                <td><input type="checkbox" name="27" id="bl" value='6.30' onclick="updateTotal()">
                 </td>
             </tr>
             <tr>
@@ -404,12 +410,12 @@
             </tr>
             <tr>
                 <td>STEAM</td>
-                <td>30. SB STEAM</td>
+                <td>30. SB STEAM *Materials Fee*</td>
                 <td>STTSS</td>
                 <td class="price">
-                    <div class="price" id="steam"><label></label></div>
+                    <div class="price" id="steam"><label>TBA</label></div>
                 </td>
-                <td><input type="checkbox" name="30" id="bl" value='0' onclick="updateTotal()">
+
                 </td>
             </tr>
             <tr>
@@ -468,6 +474,35 @@
                 <td><input type="checkbox" name="36" id="bl" value='0' onclick="updateTotal()">
                 </td>
             </tr>
+            <tr>
+                <td>Bahasa Melayu</td>
+                <td>37. Menengah Rendah Satu Bahasa Melayu</td>
+                <td>UCSAM</td>
+                <td class="price">
+                    <div class="price" id="bm"><label>25.30</label></div>
+                </td>
+                <td><input type="checkbox" name="37" id="bl" value='25.30' onclick="updateTotal()">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Stationery</td>
+                <td>38. 华文应用文纸</td>
+                <td>崇正</td>
+                <td class="price">
+                    <div class="price" id="st"><label>3.00</label></div>
+                </td>
+                <td><input type="checkbox" name="38" id="bl" value='3.00' onclick="updateTotal()">
+                </td>
+            <tr>
+                <td>39. 华文稿纸</td>
+                <td>崇正</td>
+                <td class="price">
+                    <div class="price" id="st"><label>3.00</label></div>
+                </td>
+                <td><input type="checkbox" name="39" id="bl" value='3.00' onclick="updateTotal()">
+                </td>
+            </tr>
+            </tr>
             </tbody>
             </table>
         </fieldset>
@@ -512,11 +547,17 @@
             var bookCheckboxes = document.querySelectorAll('input[type="checkbox"][id="bl"]');
 
             bookCheckboxes.forEach(function (bookCheckbox) {
-                bookCheckbox.checked = checkbox.checked;
+                if (!bookCheckbox.disabled) {
+
+                    bookCheckbox.checked = checkbox.checked;
+                }
             });
 
             updateTotal();
         }
+
+    
+
 
 
 
