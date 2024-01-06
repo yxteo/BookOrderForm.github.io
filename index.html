@@ -629,7 +629,7 @@ function submitBothForms() {
                 html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
                 $("#data").empty().append(html);
             }
-            fr.readAsArrayBuffer(file);
+            fr.readAsDataURL(file);
         });
 
 
